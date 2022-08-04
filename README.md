@@ -18,22 +18,18 @@
 
 To get a local copy up and running follow these simple example steps.
 
-
-Prerequisites: 
-   - Signup/login to your github account and go to https://github.com/Zelalem1222/Live-soccer.
    
-Setup
-   - Clone the repository on github to your local terminal
-Install
+To get a local copy follow these simple steps:
+
+- Clone this repo and open the folder containing the clone in your terminal
+- Run these commands to install the dev dependencies and get started:
    - Ensure you have git installed on your terminal
    - Run each of the following codes on your terminal
       -  npm install
       -  npm run build
       -  npm start
-   -Ensure you have node.js installed.
+   - Ensure you have node.js installed.
   
-Usage
-   - Open the index.html file with your browser to view the webpage
    
 ## Live demo 
 

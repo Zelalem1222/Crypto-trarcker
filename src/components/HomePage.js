@@ -9,7 +9,6 @@ import './HomePage.css';
 
 const HomePage = () => {
   const leagues = useSelector((state) => state.leagues);
-  // console.log(leagues)
   const dispatch = useDispatch();
 
   useEffect(() => {

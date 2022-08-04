@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
