@@ -34,6 +34,10 @@ Install
   
 Usage
    - Open the index.html file with your browser to view the webpage
+   
+## Live demo 
+
+ [Leagues status](https://coruscating-unicorn-b3bbec.netlify.app/)
 
 ## Author
 
