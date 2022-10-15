@@ -34,7 +34,7 @@ To get a local copy follow these simple steps:
    
 ## Live demo 
 
- [Crypto](https://coruscating-unicorn-b3bbec.netlify.app/)
+ [Crypto](https://crypto-tracker1222.netlify.app/)
 
 ## Author
 
