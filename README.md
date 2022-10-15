@@ -1,5 +1,5 @@
 [![](https://img.shields.io/badge/Microverse-Zelalem%20Fissha-blueviolet)](https://github.com/Zelalem1222)
-# Crryptocurrency Trucker
+# Crryptocurrency Tracker
 
 >In this Project, I worked with the real live data from the Sport API. It displayes a list of different cryptocurrencies and also it showes a detailed information about each coin.
 
@@ -34,7 +34,7 @@ To get a local copy follow these simple steps:
    
 ## Live demo 
 
- [Leagues status](https://coruscating-unicorn-b3bbec.netlify.app/)
+ [Crypto](https://crypto-tracker1222.netlify.app/)
 
 ## Author
 
@@ -49,7 +49,7 @@ To get a local copy follow these simple steps:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Zelalem1222/Live-soccer/issues).
+Feel free to check the [issues page](https://github.com/Zelalem1222/Crypto-tracker/issues).
 
 ## Acknowledgements
 
@@ -57,5 +57,5 @@ Feel free to check the [issues page](https://github.com/Zelalem1222/Live-soccer/
 
 ## Show your support
 
-Give a [⭐️](https://github.com/Zelalem1222/Live-soccer/stargazers) if you like this project!
+Give a [⭐️](https://github.com/Zelalem1222/Crypto-tracker/stargazers) if you like this project!
 
