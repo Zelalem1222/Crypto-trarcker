@@ -3,17 +3,17 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
 import { FaMicrophone } from 'react-icons/fa';
 import { IoSettingsOutline } from 'react-icons/io5';
-import { fetchLeagues } from '../redux/HomePage/HomePage';
-import Leagues from './Leagues';
+import { fetchCoins } from '../redux/HomePage/HomePage';
+import Coins from './Coins';
 import './HomePage.css';
 
 const HomePage = () => {
-  const leagues = useSelector((state) => state.leagues);
+  const coins = useSelector((state) => state.coins);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (leagues.length === 0) {
-      dispatch(fetchLeagues());
+    if (coins.length === 0) {
+      dispatch(fetchCoins());
     }
   }, []);
 
@@ -22,10 +22,10 @@ const HomePage = () => {
   return (
     <>
       <div className="nav-bar">
-        <p>Leagues</p>
+        <p>Coins</p>
         <div className="total">
-          Total Leagues :
-          {leagues.length}
+          Total coins :
+          {coins.length}
         </div>
         <div className="nav-icons">
           <FaMicrophone size={30} />
@@ -39,7 +39,7 @@ const HomePage = () => {
           className="searchbar"
           type="text"
           value={search.get('filter') || ''}
-          placeholder="Search league .."
+          placeholder="Search coin .."
           onChange={(e) => {
             const filter = e.target.value;
             if (filter) {
@@ -51,16 +51,16 @@ const HomePage = () => {
         />
       </div>
       <div className="leagues-container">
-        {leagues
+        {coins
           .filter((element) => {
             const filter = search.get('filter');
             if (!filter) return true;
-            const leagueName = element.name.toLowerCase();
-            return leagueName.startsWith(filter.toLowerCase());
+            const coinName = element.name.toLowerCase();
+            return coinName.startsWith(filter.toLowerCase());
           })
           .map((element) => (
             <>
-              <Leagues
+              <Coins
                 id={element.id}
                 name={element.name}
                 logo={element.logo}

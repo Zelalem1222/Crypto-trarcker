@@ -1,7 +1,7 @@
 [![](https://img.shields.io/badge/Microverse-Zelalem%20Fissha-blueviolet)](https://github.com/Zelalem1222)
-# Live Soccer
+# Crryptocurrency Trucker
 
->In this Project, I worked with the real live data from the Sport API. It displayes a list of different leagues and also shows the rank of the teams that played in each league. 
+>In this Project, I worked with the real live data from the Sport API. It displayes a list of different cryptocurrencies and also it showes a detailed information about each coin.
 
 
 
@@ -11,6 +11,7 @@
 - Javascript
 - CSS
 - Redux
+- Bootstrap
 
 
 

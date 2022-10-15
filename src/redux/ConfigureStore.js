@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
 import detailSlice from './Details/Details';
-import leagueReducer from './HomePage/HomePage';
+import coinReducer from './HomePage/HomePage';
 
 const store = configureStore({
   reducer: {
-    leagues: leagueReducer,
+    coins: coinReducer,
     details: detailSlice,
   },
 

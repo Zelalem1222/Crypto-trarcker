@@ -1,31 +1,33 @@
+/* eslint-disable */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-const BASE_URL = 'https://api-football-standings.azharimm.site/leagues';
+const BASE_URL = 'https://api.coinstats.app/public/v1/coins/';
 
-export const fetchLeagues = createAsyncThunk(
-  'leagues/fetchLeagues',
+export const fetchCoins = createAsyncThunk(
+  'coins/fetchCoins',
   async () => {
     const response = await fetch(BASE_URL);
+    
     const data = await response.json();
-    const teams = data.data.map((team, i) => ({
-      id: team.id,
-      name: team.name,
-      logo: team.logos.dark,
+    const coins = data.coins.map((coin, i) => ({
+      id: coin.id,
+      name: coin.name,
+      logo: coin.icon,
       index: i,
     }));
-    return teams;
+    return coins;
   },
 );
 
 const data = {
-  name: 'leagues',
+  name: 'coins',
   initialState: [],
   reducers: {},
   extraReducers: {
-    [fetchLeagues.fulfilled]: (state, action) => action.payload,
+    [fetchCoins.fulfilled]: (state, action) => action.payload,
   },
 };
 
-const leagueSlice = createSlice(data);
+const coinSlice = createSlice(data);
 
-export default leagueSlice.reducer;
+export default coinSlice.reducer;

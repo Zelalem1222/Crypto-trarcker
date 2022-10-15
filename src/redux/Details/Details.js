@@ -1,37 +1,42 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+/* eslint-disable */
 
-const BASE_URL = 'https://api-football-standings.azharimm.site/leagues/';
+const BASE_URL = 'https://api.coinstats.app/public/v1/coins/';
+const GET_COIN_DATA = 'GET_COIN_DATA';
 
-export const fetchLeaguesDetails = createAsyncThunk(
-  'details/fetchLeaguesDetails',
-  async (id) => {
-    const response = await fetch(`${BASE_URL}${id}/standings?season=2021`);
-    const seasonsData = await response.json();
-    const data = seasonsData.data.standings;
+export const fetchCoinsDetailsApi = async(coin) => {
+  const response = await fetch(`${BASE_URL}${coin}`);
+  const data = await response.json();
+  const coinData = data.coin
+  const details =[coinData].map(coin => ({
+    id: coin.id,
+    name: coin.name,
+    image: coin.icon,
+    price: coin.price,
+    rank: coin.rank,
+    priceChange1h: coin.priceChange1h,
+    priceChange1d: coin.priceChange1d,
+    priceChange1w: coin.priceChange1w
+   }))
+   return details;
+} 
 
-    const details = data.map((club) => ({
-      rank: club.stats[8].value,
-      gamesPlayed: club.stats[3].value,
-      wins: club.stats[0].value,
-      losses: club.stats[1].value,
-      ties: club.stats[2].value,
-      score: club.stats[4].value,
-      name: club.team.displayName,
-      logo: club.team.logos[0].href,
-    }));
-    return details;
-  },
-);
+const coinDataReducer = (state = [] , action ={} ) => {
+  switch (action.type) {
+    case GET_COIN_DATA:
+     return action.payload
 
-const data = {
-  name: 'details',
-  initialState: [],
-  reducers: {},
-  extraReducers: {
-    [fetchLeaguesDetails.fulfilled]: (state, action) => action.payload,
-  },
-};
+    default: 
+      return state  
+  }
+}
 
-const detailSlice = createSlice(data);
+export default coinDataReducer;
 
-export default detailSlice.reducer;
+
+
+export const fetchCoinsDetails = (coin) => async (dispatch) => {
+  const coinData = await fetchCoinsDetailsApi(`${coin}`);
+  dispatch({type: GET_COIN_DATA , payload: coinData });
+}
+
+
