@@ -141,6 +141,10 @@
   background-color: currentColor;
 }
 
+.league-card :hover {
+  transform: translateY(-10px);
+}
+
 .league-card img {
   width: 100%;
   height: 100px;
@@ -155,6 +159,8 @@
 .league-card a {
   text-decoration: none;
 }
+
+
 
 @media only screen and (min-width: 768px) {
   .league-card {
@@ -175,3 +181,6 @@
     font-size: 1.6rem;
   }
 }
+
+
+
